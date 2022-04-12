@@ -30,28 +30,6 @@ export default function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setTitleError(false)
-    setDetailsError(false)
-
-    if (title == "") {
-      setTitleError(true)
-    }
-    if (details == "") {
-      setDetailsError(true)
-    }
-    if (title && details) {
-      fetch("http://localhost:8000/notes", {
-        method: 'POST',
-        headers: {"Content-type": "application/json"},
-        body: JSON.stringify({ title, details, category })
-      }).then(() => history.push("/"))
-    }
-  }
-
-
   return (
     <Container>
       <Typography
@@ -63,7 +41,7 @@ export default function Login() {
         Enter Login Details
       </Typography>
 
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+      <form noValidate autoComplete="off" >
         <TextField
           onChange={(e) => setTitle(e.target.value)} 
           className={classes.field}
