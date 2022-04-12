@@ -66,7 +66,7 @@ export default function Layout({ children }) {
         {
             text: 'Login',
             icon: <LoginIcon color="secondary" />,
-            path: '/'
+            path: '/Login'
         },
         {
             text: 'My Workouts',
