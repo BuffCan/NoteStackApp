@@ -13,7 +13,7 @@ import { AppBar } from '@material-ui/core'
 import { Toolbar } from '@material-ui/core'
 import { format } from 'date-fns'
 import { Avatar } from '@material-ui/core'
-import { Login } from '@mui/icons-material'
+import LoginIcon from '@mui/icons-material/Login';
 
 const drawerWidth = 240
 
@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) =>{
         },
         avatar: {
             marginLeft: theme.spacing(1),
+        },
+        button: {
+            margin: 0
         }
     }
     
@@ -62,7 +65,7 @@ export default function Layout({ children }) {
     const menuItems = [
         {
             text: 'Login',
-            icon: <Login color="secondary" />,
+            icon: <LoginIcon color="secondary" />,
             path: '/'
         },
         {
@@ -91,7 +94,7 @@ export default function Layout({ children }) {
                 <Typography>
                     User
                 </Typography>
-                <Button><Avatar src="/default-user-image" className={classes.avatar} /></Button>
+                <Button className={classes.button}><Avatar src="/default-user-image" className={classes.avatar} /></Button>
                 
             </Toolbar>
         </AppBar>
