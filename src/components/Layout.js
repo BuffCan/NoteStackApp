@@ -69,12 +69,12 @@ export default function Layout({ children }) {
             path: '/Login'
         },
         {
-            text: 'My Workouts',
+            text: 'My Notes',
             icon: <SubjectOutlined color="secondary" />,
             path: '/'
         },
         {
-            text: 'Create Workout',
+            text: 'Create Note',
             icon: <AddCircleOutlineOutlined color="secondary" />,
             path: '/create'
         }
@@ -89,7 +89,7 @@ export default function Layout({ children }) {
         >
             <Toolbar>
                 <Typography className={classes.date}>
-                   Welcome to FitStack, today is the { format(new Date(), 'do MMMM Y') }
+                   Welcome to NoteStack, today is the { format(new Date(), 'do MMMM Y') }
                 </Typography>
                 <Typography>
                     User
@@ -108,7 +108,7 @@ export default function Layout({ children }) {
         >
             <div>
                 <Typography variant="h5" className={classes.title}>
-                    Fitstack 
+                    NoteStack 
                     <Avatar
                         variant="round" 
                         src="/LOGO3.png" 

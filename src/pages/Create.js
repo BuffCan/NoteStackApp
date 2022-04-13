@@ -95,7 +95,7 @@ export default function Create() {
           variant="outlined"
           color="secondary"
           multiline
-          rows={4}
+          rows={5}
           fullWidth
           required
           error={detailsError}
@@ -104,10 +104,10 @@ export default function Create() {
         <FormControl className={classes.field}>
           <FormLabel>Note Catergory</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
-            <FormControlLabel value="exercise" control={<Radio />} label="Exercise" />
-            <FormControlLabel value="exercise" control={<Radio />} label="Exercise" />
-            <FormControlLabel value="exercise" control={<Radio />} label="Exercise" />
-            <FormControlLabel value="exercise" control={<Radio />} label="Exercise" />
+            <FormControlLabel value="todo" control={<Radio />} label="To-Do" />
+            <FormControlLabel value="reminder" control={<Radio />} label="Reminder" />
+            <FormControlLabel value="work" control={<Radio />} label="Work" />
+            <FormControlLabel value="learning" control={<Radio />} label="Learning" />
           </RadioGroup>
         </FormControl>
 
@@ -122,7 +122,7 @@ export default function Create() {
         // to remove dropshadow of the button use:
         /* disableElevation */
       >
-        Submit
+        Create Note
       </Button>
       </form>
     </Container>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Grid } from '@material-ui/core'
+import { Container, Grid, Paper } from '@material-ui/core'
 // import { Paper } from '@material-ui/core'
 import NoteCard from '../components/NoteCard'
 
@@ -23,9 +23,18 @@ export default function Notes() {
 
   return (
     <Container>
-      {/* <Grid container>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>1</Paper>
+       {/* <Grid container direction="column">
+        <Grid item xs={12} sm={6} md={3} >
+          <Paper>
+          stuff
+          stuff
+          stuff
+          stuff
+          stuff
+          stuff
+          stuff
+          stuff
+          </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <Paper>2</Paper>
@@ -37,7 +46,11 @@ export default function Notes() {
           <Paper>4</Paper>
         </Grid>
       </Grid> */}
-      <Grid container spacing={3}>
+      <Grid 
+      container
+      direction="row"
+      spacing={3}
+      >
       {notes.map(note => (
         <Grid item key={note.id} xs={12} md={6} lg={4}>
           <NoteCard note={note} handleDelete={handleDelete} />
