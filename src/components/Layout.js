@@ -14,6 +14,8 @@ import { Toolbar } from '@material-ui/core'
 import { format } from 'date-fns'
 import { Avatar } from '@material-ui/core'
 import LoginIcon from '@mui/icons-material/Login';
+import Dropdown from './Dropdown';
+import { AccountCircle } from '@material-ui/icons'
 
 const drawerWidth = 240
 
@@ -69,6 +71,11 @@ export default function Layout({ children }) {
             path: '/Login'
         },
         {
+            text: 'Profile',
+            icon: <AccountCircle color="secondary" />,
+            path: '/profile'
+        },
+        {
             text: 'My Notes',
             icon: <SubjectOutlined color="secondary" />,
             path: '/'
@@ -94,8 +101,7 @@ export default function Layout({ children }) {
                 <Typography>
                     User
                 </Typography>
-                <Button className={classes.button}><Avatar src="/default-user-image" className={classes.avatar} /></Button>
-                
+                <Dropdown />                
             </Toolbar>
         </AppBar>
         

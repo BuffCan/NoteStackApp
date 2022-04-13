@@ -5,12 +5,6 @@
       "details": "Grocery list:\n\n-coffee\n-mate tea\n-red bull coconut/blueberry\n-blueberry muffins\n-peperoni pizza",
       "category": "todo",
       "id": 1
-    },
-    {
-      "title": "test",
-      "details": "ests",
-      "category": "reminder",
-      "id": 2
     }
   ]
 }
