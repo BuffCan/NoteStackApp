@@ -94,7 +94,6 @@ export default function Dropdown() {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      {/* <MenuItem onClick={() => history.push('/profile')}>Profile</MenuItem> */}
                       <MenuItem onClick={profileHandler}>Profile</MenuItem>
                       <MenuItem onClick={handleClose}>Logout</MenuItem>
                     </MenuList>

@@ -4,19 +4,39 @@ import { CardHeader } from '@material-ui/core';
 import { CardContent } from '@material-ui/core';
 import { IconButton } from '@material-ui/core';
 import { DeleteOutlined } from '@material-ui/icons';
+import { deepPurple } from '@material-ui/core/colors';
+import { blue } from '@material-ui/core/colors';
+import { teal } from '@material-ui/core/colors';
+import { blueGrey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
-
+    root: {
+        background: (note) => {
+            if (note.category == "todo") {
+                return deepPurple[100]
+            }
+            if (note.category == "reminder") {
+                return blue[100]
+            }
+            if (note.category == "work") {
+                return teal[100]
+            }
+            if (note.category == "learning") {
+                return blueGrey[100]
+            }
+        }
+    }
 })
 
 export default function NoteCard({ note, handleDelete }) {
-    const classes = useStyles()
+    const classes = useStyles(note)
 
     return (
         <div>
             <Card
                 display="block"
-                elevation={2}
+                elevation={7}
+                className={classes.root}
             >
                 <CardHeader
                     action={
