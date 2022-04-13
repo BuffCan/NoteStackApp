@@ -11,6 +11,18 @@
       "email": "vadim@email.de",
       "password": "12345",
       "id": 2
+    },
+    {
+      "name": "fas",
+      "email": "fdss",
+      "password": "sdfds",
+      "id": 3
+    },
+    {
+      "name": "reagan",
+      "email": "reagan@email.com",
+      "password": "12345",
+      "id": 4
     }
   ]
 }

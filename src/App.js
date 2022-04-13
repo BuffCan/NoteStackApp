@@ -32,7 +32,7 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route path="/">
+            <Route path="/login">
               <Login />
             </Route>
             <Route path="/profile">

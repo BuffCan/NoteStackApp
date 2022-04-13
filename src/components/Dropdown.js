@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Avatar, Button } from '@material-ui/core';
 import { ClickAwayListener } from '@material-ui/core'
 import { Grow } from '@material-ui/core'
@@ -9,8 +10,15 @@ import { MenuList } from '@material-ui/core'
 import { Stack } from '@mui/material'
 
 export default function Dropdown() {
+    const history = useHistory()
+
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
+
+    const myHandler = (event) => {
+      if (anchorRef.current && anchorRef.current.contains(event.target)) {
+        {handleClose};
+    }
   
     const handleToggle = () => {
       setOpen((prevOpen) => !prevOpen);
@@ -18,7 +26,6 @@ export default function Dropdown() {
   
     const handleClose = (event) => {
       if (anchorRef.current && anchorRef.current.contains(event.target)) {
-         //add logout here ?
         return;
       }
   
@@ -82,7 +89,8 @@ export default function Dropdown() {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      <MenuItem onClick={handleClose}>Profile</MenuItem>
+                      <MenuItem onClick={() => history.push('/profile')}>Profile</MenuItem>
+                      <MenuItem onClick={myHandler}>Profile</MenuItem>
                       <MenuItem onClick={handleClose}>Logout</MenuItem>
                     </MenuList>
                   </ClickAwayListener>
