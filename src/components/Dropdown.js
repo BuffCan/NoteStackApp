@@ -14,15 +14,20 @@ export default function Dropdown() {
 
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
-    const myHandler = (event) => {
-      if (anchorRef.current && anchorRef.current.contains(event.target)) {
-        {handleClose};
-    }
   
     const handleToggle = () => {
       setOpen((prevOpen) => !prevOpen);
     };
+
+    const profileHandler = (event) => {
+      history.push('/profile')
+
+      if (anchorRef.current && anchorRef.current.contains(event.target)) {
+        return;
+      }
+  
+      setOpen(false);
+    }
   
     const handleClose = (event) => {
       if (anchorRef.current && anchorRef.current.contains(event.target)) {
@@ -89,8 +94,8 @@ export default function Dropdown() {
                       aria-labelledby="composition-button"
                       onKeyDown={handleListKeyDown}
                     >
-                      <MenuItem onClick={() => history.push('/profile')}>Profile</MenuItem>
-                      <MenuItem onClick={myHandler}>Profile</MenuItem>
+                      {/* <MenuItem onClick={() => history.push('/profile')}>Profile</MenuItem> */}
+                      <MenuItem onClick={profileHandler}>Profile</MenuItem>
                       <MenuItem onClick={handleClose}>Logout</MenuItem>
                     </MenuList>
                   </ClickAwayListener>
