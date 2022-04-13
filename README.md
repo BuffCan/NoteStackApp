@@ -1,8 +1,6 @@
-# FitNotesApp 💪
+# NotesStackApp 💪
 
-This project was made using `React` and `Material UI`. It is a simple notes app for documenting your workouts and tracking your fitness journey.
-It offers the options of creating your own custom workouts and exercises or choosing from a list provided by the app. It also comes with a
-neat calender, tracking the days you have exercised and giving you the ability to see your past results to maintain and track your workout routine and progress.
+This project was made using React and Material UI. It is a simple notes app for creating notes and to-do's and also gives you the option to store them online. They are also color coded for all of your different notes and tasks.
 
 ## Live Demo 🛠️:
 

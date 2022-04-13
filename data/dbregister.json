@@ -1,5 +1,22 @@
 {
   "users": [
-    
+    {
+      "name": "fdsd",
+      "email": "fdsfdsf",
+      "password": "dsfds",
+      "id": 1
+    },
+    {
+      "name": "vgdfg",
+      "email": "gfdg",
+      "password": "gfdg",
+      "id": 2
+    },
+    {
+      "name": "aaaaaaaa",
+      "email": "aaaaaaaaa",
+      "password": "aaaaaaaaaa",
+      "id": 3
+    }
   ]
 }

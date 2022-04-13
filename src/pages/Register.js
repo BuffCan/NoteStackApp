@@ -5,24 +5,17 @@ import { Container } from '@material-ui/core'
 import { KeyboardArrowRight } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles({
   field: {
     marginTop: 20,
     marginBottom: 20,
-    display: "block",
-  },
-  btn: {
-    marginLeft: 0,
-    marginTop: 20
-  },
-  container: {
-    align: "center"
+    display: "block"
   }
 })
 
-export default function Login() {
+export default function Register() {
   const classes = useStyles()
   const history = useHistory()
   const [name, setName] = useState("")
@@ -31,6 +24,8 @@ export default function Login() {
   const [nameError, setNameError] = useState(false)
   const [emailError, setEmailError] = useState(false)
   const [passwordError, setPasswordError] = useState(false)
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -51,23 +46,23 @@ export default function Login() {
       console.log(name, email, password)
     }
     if (name && email && password) {
-      fetch("http://localhost:7000/users", {
+      fetch("http://localhost:4000/users", {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ name, email, password })
-      }).then(() => history.push("/notes"))
+      }).then(() => history.push("/login"))
     }
   }
 
   return (
-    <Container className={classes.container}>
+    <Container>
       <Typography
         variant="h6"
         color="textSecondary"
         component="h2"
         gutterBottom
       >
-        Enter Login Details
+        Enter Registration Details
       </Typography>
 
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
@@ -107,19 +102,9 @@ export default function Login() {
         variant="contained"
         endIcon={<KeyboardArrowRight />}
         >
-          Log In
+          Register
         </Button>
       </form>
-      <Button
-          href="/register"
-          className={classes.btn}
-          type="submit"
-          color="secondary"
-          variant="outlined"
-          endIcon={<KeyboardArrowRight />}
-        >
-          Sign Up
-        </Button>
     </Container>
   )
 }

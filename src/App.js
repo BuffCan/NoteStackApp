@@ -11,6 +11,8 @@ import { purple } from '@material-ui/core/colors';
 import Profile from './pages/Profile';
 import Sidebar from './components/Sidebar';
 import Appbar from './components/Appbar';
+import Register from './pages/Register';
+import AppbarLoginRegister from './components/AppbarLoginRegister';
 
 const theme = createTheme({
   palette: {
@@ -34,8 +36,11 @@ function App() {
       <Router>
           <Switch>
             <Route path="/register">
+              <AppbarLoginRegister />
+              <Register />
             </Route>
             <Route path="/login">
+              <AppbarLoginRegister />
               <Login />
             </Route>
             <Route path="/profile">
