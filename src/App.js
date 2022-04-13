@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
 import Layout from './components/Layout';
+import Profile from './pages/Profile';
 
 const theme = createTheme({
   palette: {
@@ -33,6 +34,9 @@ function App() {
           <Switch>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/profile">
+              <Profile />
             </Route>
             <Route exact path="/">
               <Notes />

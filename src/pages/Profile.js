@@ -14,7 +14,7 @@ export default function Profile() {
 
     return (
         <Container>
-            <Typography variant="h2">hello</Typography>
+            <Typography variant="h2">Profile</Typography>
         </Container>
   )
 }
