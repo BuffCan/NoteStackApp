@@ -70,11 +70,11 @@ export default function Layout({ children }) {
             icon: <LoginIcon color="secondary" />,
             path: '/login'
         },
-        {
-            text: 'Profile',
-            icon: <AccountCircle color="secondary" />,
-            path: '/profile'
-        },
+        // {
+        //     text: 'Profile',
+        //     icon: <AccountCircle color="secondary" />,
+        //     path: '/profile'
+        // },
         {
             text: 'My Notes',
             icon: <SubjectOutlined color="secondary" />,
