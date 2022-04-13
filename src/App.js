@@ -32,13 +32,13 @@ function App() {
       <Router>
         <Layout>
           <Switch>
-            <Route path="/login">
+            <Route path="/">
               <Login />
             </Route>
             <Route path="/profile">
               <Profile />
             </Route>
-            <Route exact path="/">
+            <Route path="/notes">
               <Notes />
             </Route>
             <Route path="/create">

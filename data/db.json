@@ -1,9 +1,9 @@
 {
   "notes": [
     {
-      "title": "Go to the supermarket",
-      "details": "Grocery list:\n\n-coffee\n-mate tea\n-red bull coconut/blueberry\n-blueberry muffins\n-peperoni pizza",
-      "category": "todo",
+      "title": "test note ",
+      "details": "test test test test",
+      "category": "learning",
       "id": 1
     }
   ]

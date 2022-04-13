@@ -68,7 +68,7 @@ export default function Layout({ children }) {
         {
             text: 'Login',
             icon: <LoginIcon color="secondary" />,
-            path: '/Login'
+            path: '/'
         },
         {
             text: 'Profile',
@@ -78,7 +78,7 @@ export default function Layout({ children }) {
         {
             text: 'My Notes',
             icon: <SubjectOutlined color="secondary" />,
-            path: '/'
+            path: '/notes'
         },
         {
             text: 'Create Note',
