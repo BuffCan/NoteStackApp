@@ -7,8 +7,10 @@ import Create from './pages/Create'
 import Login from './pages/Login'
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
-import Layout from './components/Layout';
+
 import Profile from './pages/Profile';
+import Sidebar from './components/Sidebar';
+import Appbar from './components/Appbar';
 
 const theme = createTheme({
   palette: {
@@ -30,22 +32,28 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Layout>
           <Switch>
+            <Route path="/register">
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
             <Route path="/profile">
+              <Appbar />
+              <Sidebar />
               <Profile />
             </Route>
             <Route path="/notes">
+              <Appbar />
+              <Sidebar />
               <Notes />
             </Route>
             <Route path="/create">
+              <Appbar />
+              <Sidebar />
               <Create />
             </Route>
           </Switch>
-        </Layout>
       </Router>
     </ThemeProvider>
   );

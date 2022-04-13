@@ -7,22 +7,23 @@ import { DeleteOutlined } from '@material-ui/icons';
 import { deepPurple } from '@material-ui/core/colors';
 import { blue } from '@material-ui/core/colors';
 import { teal } from '@material-ui/core/colors';
-import { blueGrey } from '@material-ui/core/colors';
+// import { blueGrey } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
     root: {
         background: (note) => {
             if (note.category == "todo") {
-                return deepPurple[100]
+                return deepPurple[200]
             }
             if (note.category == "reminder") {
-                return blue[100]
+                return blue[200]
             }
             if (note.category == "work") {
-                return teal[100]
+                return teal[200]
             }
             if (note.category == "learning") {
-                return blueGrey[100]
+                return orange[200]
             }
         }
     }

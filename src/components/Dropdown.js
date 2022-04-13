@@ -8,6 +8,7 @@ import { Popper } from '@material-ui/core'
 import { MenuItem } from '@material-ui/core'
 import { MenuList } from '@material-ui/core'
 import { Stack } from '@mui/material'
+import { AccountCircle } from '@material-ui/icons'
 
 export default function Dropdown() {
     const history = useHistory()
@@ -68,7 +69,7 @@ export default function Dropdown() {
             aria-haspopup="true"
             onClick={handleToggle}
           >
-            <Avatar src="/default-user-image"/>
+            <Avatar src={AccountCircle}/>
           </Button>
           <Popper
             open={open}
