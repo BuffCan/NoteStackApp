@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
-import { Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { Button } from '@material-ui/core'
-import { Container } from '@material-ui/core'
 import { KeyboardArrowRight } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles({
   field: {
@@ -15,10 +14,8 @@ const useStyles = makeStyles({
   },
   btn: {
     marginLeft: 0,
-    marginTop: 20
-  },
-  container: {
-    align: "center"
+    marginTop: 20,
+    marginRight: 93
   }
 })
 
@@ -60,7 +57,15 @@ export default function Login() {
   }
 
   return (
-    <Container className={classes.container}>
+    <Grid 
+      container 
+      className={classes.container}
+      spacing= {0}
+      direction= "column"
+      alignItems= "center"
+      justifyContent= "center"
+    >
+      <Grid item xs={7}>
       <Typography
         variant="h6"
         color="textSecondary"
@@ -120,6 +125,9 @@ export default function Login() {
         >
           Sign Up
         </Button>
-    </Container>
+        </Grid>
+    </Grid>
+
   )
 }
+

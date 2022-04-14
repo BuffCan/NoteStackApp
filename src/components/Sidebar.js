@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => {
             width: drawerWidth
         },
         root: {
-            display: "flex"
+            display: "flex",
         },
         active: {
             background: '#f4f4f4'
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => {
     }
 })
 
-export default function Sidebar() {
+export default function Sidebar({ children }) {
     const classes = useStyles()
     const history = useHistory()
     const location = useLocation()
@@ -102,6 +102,12 @@ export default function Sidebar() {
                 </List>
 
             </Drawer>
+
+            {/* main content */}
+            <div className={classes.page}>
+                <div className={classes.toolbar}></div>
+                { children }
+            </div>
         </div>
     );
 }

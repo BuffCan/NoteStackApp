@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Grid, Paper } from '@material-ui/core'
+import { Container, Grid, makeStyles, Paper } from '@material-ui/core'
 // import { Paper } from '@material-ui/core'
 import NoteCard from '../components/NoteCard'
 
+const drawerWidth = 240
+
+const useStyles = makeStyles({
+  root: {
+    width: `calc(100% - ${drawerWidth}px)`
+  }
+})
+
 export default function Notes() {
+  const classes = useStyles()
   const [notes, setNotes] = useState([])
 
   useEffect(() => {
@@ -22,40 +31,31 @@ export default function Notes() {
   }
 
   return (
-    <Container>
-       {/* <Grid container direction="column">
-        <Grid item xs={12} sm={6} md={3} >
-          <Paper>
-          stuff
-          stuff
-          stuff
-          stuff
-          stuff
-          stuff
-          stuff
-          stuff
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>2</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>3</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>4</Paper>
-        </Grid>
-      </Grid> */}
-      <Grid 
-      container
-      direction="row"
-      spacing={3}
+    <Container
+      className={classes.root}
+      fixed
+      maxWidth="lg"
+    >
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
       >
-      {notes.map(note => (
-        <Grid item key={note.id} xs={12} md={6} lg={4}>
-          <NoteCard note={note} handleDelete={handleDelete} />
+        <Grid 
+        item
+        container
+        maxWidth="80"
+        direction="row"
+        spacing={3}
+        >
+        {notes.map(note => (
+          <Grid item key={note.id} xs={12} md={6} lg={4}>
+            <NoteCard note={note} handleDelete={handleDelete} />
+          </Grid>
+        ))}
         </Grid>
-      ))}
       </Grid>
     </Container>
   )

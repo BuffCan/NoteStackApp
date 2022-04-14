@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import { Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { Button } from '@material-ui/core'
-import { Container } from '@material-ui/core'
 import { KeyboardArrowRight } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
@@ -55,7 +54,15 @@ export default function Register() {
   }
 
   return (
-    <Container>
+    <Grid
+      container 
+      className={classes.container}
+      spacing= {0}
+      direction= "column"
+      alignItems= "center"
+      justifyContent= "center"
+    >
+      <Grid item xs={7}>
       <Typography
         variant="h6"
         color="textSecondary"
@@ -105,6 +112,7 @@ export default function Register() {
           Register
         </Button>
       </form>
-    </Container>
+      </Grid>
+    </Grid>
   )
 }

@@ -102,7 +102,7 @@ export default function Create() {
         />
 
         <FormControl className={classes.field}>
-          <FormLabel>Note Catergory</FormLabel>
+          <FormLabel>{/* Note Catergory */}</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
             <FormControlLabel value="todo" control={<Radio />} label="To-Do" />
             <FormControlLabel value="reminder" control={<Radio />} label="Reminder" />
