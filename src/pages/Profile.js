@@ -14,7 +14,24 @@ export default function Profile() {
 
     return (
         <Container>
-            <Typography variant="h2">Profile</Typography>
+            <Typography 
+            variant="h4"
+            color="textPrimary"
+            gutterBottom
+            >
+              Profile
+            </Typography>
+            <Typography
+              variant="h6"
+              color="textSecondary"
+
+            >
+              Username: Vadim
+              <br />
+              E-Mail: vadim@email.com
+              <br />
+              Password: ****
+            </Typography>
         </Container>
   )
 }

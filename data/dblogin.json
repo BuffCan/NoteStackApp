@@ -5,60 +5,6 @@
       "email": "vadim@email.com",
       "password": "1234",
       "id": 1
-    },
-    {
-      "name": "vadim",
-      "email": "vadim@email.de",
-      "password": "12345",
-      "id": 2
-    },
-    {
-      "name": "fas",
-      "email": "fdss",
-      "password": "sdfds",
-      "id": 3
-    },
-    {
-      "name": "reagan",
-      "email": "reagan@email.com",
-      "password": "12345",
-      "id": 4
-    },
-    {
-      "name": "fa",
-      "email": "afdsa",
-      "password": "adsfsd",
-      "id": 5
-    },
-    {
-      "name": "sdfdsgfds",
-      "email": "gfdgfd",
-      "password": "fdsfds",
-      "id": 6
-    },
-    {
-      "name": "fdsfds",
-      "email": "fdsfds",
-      "password": "fdsfds",
-      "id": 7
-    },
-    {
-      "name": "fgdg",
-      "email": "fdsfds",
-      "password": "fdsf",
-      "id": 8
-    },
-    {
-      "name": "aaaaaaa",
-      "email": "aaaaaaa",
-      "password": "aaaaaaaa",
-      "id": 9
-    },
-    {
-      "name": "test",
-      "email": "test",
-      "password": "test",
-      "id": 10
     }
   ]
 }

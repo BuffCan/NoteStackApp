@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Grid, makeStyles, Paper } from '@material-ui/core'
+import { Container, Grid, makeStyles } from '@material-ui/core'
 // import { Paper } from '@material-ui/core'
 import NoteCard from '../components/NoteCard'
 

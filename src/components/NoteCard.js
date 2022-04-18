@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, makeStyles, Typography } from '@material-ui/core';
 import { CardHeader } from '@material-ui/core';
 import { CardContent } from '@material-ui/core';
@@ -9,6 +9,11 @@ import { blue } from '@material-ui/core/colors';
 import { teal } from '@material-ui/core/colors';
 // import { blueGrey } from '@material-ui/core/colors';
 import { orange } from '@material-ui/core/colors';
+import { CardActions } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
+// import NoteCard from '../components/NoteCard'
+
 
 const useStyles = makeStyles({
     root: {
@@ -25,12 +30,26 @@ const useStyles = makeStyles({
             if (note.category == "learning") {
                 return orange[200]
             }
-        }
+        },
+        padding: 0
+    },
+    edit: {
+        minWidth: "100%"
+    },
+    cardContent: {
+        minWidth: "90%"
     }
+    
 })
 
 export default function NoteCard({ note, handleDelete }) {
     const classes = useStyles(note)
+    const [isEditable, setIsEditable] = useState(false);
+    const [details, setDetails] = useState(note.details);
+
+    const handleEdit = (e) => {
+        setIsEditable(!isEditable)
+      };
 
     return (
         <div>
@@ -53,9 +72,25 @@ export default function NoteCard({ note, handleDelete }) {
                         variant="body2" 
                         color="textSecondary"
                     >
-                        {note.details}
+                        <TextField
+                        className={classes.edit}
+                        disabled={!isEditable}
+                        direction="block"
+                        fullWidth
+                        multiline
+                        InputProps={{ disableUnderline: true }}
+                        value={details}
+                        onChange={(e) => setDetails(e.target.value)}
+                        onBlur={() => setIsEditable(false)}
+                        />
+
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <Button size="small" onClick={handleEdit}>
+                        Edit
+                    </Button>
+                </CardActions>
             </Card>
     </div>
   )

@@ -1,22 +1,10 @@
 {
   "users": [
     {
-      "name": "fdsd",
-      "email": "fdsfdsf",
-      "password": "dsfds",
+      "name": "Vadim",
+      "email": "vadim@email.com",
+      "password": "1234",
       "id": 1
-    },
-    {
-      "name": "vgdfg",
-      "email": "gfdg",
-      "password": "gfdg",
-      "id": 2
-    },
-    {
-      "name": "aaaaaaaa",
-      "email": "aaaaaaaaa",
-      "password": "aaaaaaaaaa",
-      "id": 3
     }
   ]
 }

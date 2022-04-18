@@ -50,7 +50,7 @@ export default function Appbar({children}) {
                    Welcome to NoteStack, today is the { format(new Date(), 'do MMMM Y') }
                 </Typography>
                 <Typography className={classes.user}>
-                    User
+                    Vadim
                 </Typography>
                 <Dropdown />                
             </Toolbar>

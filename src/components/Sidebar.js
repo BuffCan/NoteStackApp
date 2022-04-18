@@ -44,11 +44,11 @@ export default function Sidebar({ children }) {
     const location = useLocation()
 
     const menuItems = [
-        {
-            text: 'Login',
-            icon: <LoginIcon color="secondary" />,
-            path: '/login'
-        },
+        // {
+        //     text: 'Login',
+        //     icon: <LoginIcon color="secondary" />,
+        //     path: '/login'
+        // },
         // {
         //     text: 'Profile',
         //     icon: <AccountCircle color="secondary" />,

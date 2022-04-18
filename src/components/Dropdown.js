@@ -29,6 +29,10 @@ export default function Dropdown() {
   
       setOpen(false);
     }
+
+    const handleLogout = (event) => {
+      history.push("/login")
+    }
   
     const handleClose = (event) => {
       if (anchorRef.current && anchorRef.current.contains(event.target)) {
@@ -96,7 +100,7 @@ export default function Dropdown() {
                       onKeyDown={handleListKeyDown}
                     >
                       <MenuItem onClick={profileHandler}>Profile</MenuItem>
-                      <MenuItem onClick={handleClose}>Logout</MenuItem>
+                      <MenuItem onClick={handleLogout}>Logout</MenuItem>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
